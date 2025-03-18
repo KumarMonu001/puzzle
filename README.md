@@ -7,16 +7,16 @@ Key features
 
 1. Randomly generated math problem
 2. Players are given difficulty level.
-3. Difficulty level are:
+3. Difficulty level are:  
     a. Easy - Whole number operation
     b. Medium - Decimal numbers with 1 decimal places
     c. hard - Decimal numbers with 2 decimal places
-4. Operations supported:
+4. Operations supported:  
     a. Addition ( + )
     b. Subtraction ( - )
     c. Multiplication ( * )
     d. Division( / )
-5. Scoring system:
+5. Scoring system:  
     a. On every correct answer player will get 1 point
     b. On every wrong answer player will loss 1 point
 6. Option to replay the game
@@ -43,8 +43,9 @@ Game Rules
 
 Running the game
 
-Make sure you have Python installed. Run the script using:
-python game_name.py     ( game_name - name of the game , you can change it according to yourself or run on default name)
+Make sure you have Python installed. Run the script using:  
+python game_name.py  
+( game_name - name of the game , you can change it according to yourself or run on default name)
 
 
 Requirement
@@ -56,5 +57,5 @@ Author
 Monu kumar
 
 
-License
+License  
 This project is open-source and free to use.
