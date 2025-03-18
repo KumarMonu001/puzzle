@@ -2,7 +2,6 @@ import random
 from random import randint
 
 operator_list = ['+', '-', '*', '/']
-complexity = ['easy', 'medium', 'hard']
 
 # game logic
 def game(points, operators_list, choice):
