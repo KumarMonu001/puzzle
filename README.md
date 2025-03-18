@@ -3,7 +3,7 @@ This is a simple math puzzle game on console where user must quickly solve the p
 The player is asked for five questions and score will depend on the answer.
 
 
-Key features
+**Key features**  
 
 1. Randomly generated math problem
 2. Players are given difficulty level.
@@ -22,7 +22,7 @@ Key features
 6. Option to replay the game
 
 
-How to play
+**How to play**  
 
 1. Run the script.
 2. Choose the difficulty level (1, 2 or 3).
@@ -33,7 +33,7 @@ How to play
 7. Choose to play again or exit.
 
 
-Game Rules
+**Game Rules**  
 
 1. Correct answers increase points by 1.
 2. Incorrect answers decrease points by 1.
@@ -41,21 +41,21 @@ Game Rules
 4. The game ends after 5 questions, displaying the final score.
 
 
-Running the game
+**Running the game**  
 
 Make sure you have Python installed. Run the script using:  
 python game_name.py  
 ( game_name - name of the game , you can change it according to yourself or run on default name)
 
 
-Requirement
+**Requirement**  
 
 - python3
 
 
-Author  
+**Author**  
 Monu kumar
 
 
-License  
+**License**  
 This project is open-source and free to use.
