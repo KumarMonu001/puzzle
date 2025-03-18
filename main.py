@@ -5,13 +5,20 @@ operator_list = ['+', '-', '*', '/']
 complexity = ['easy', 'medium', 'hard']
 
 # game logic
-def game(points, operators_list, num1, num2):
+def game(points, operators_list, choice):
     # variable to count player score
     count = 1
     print("Solve as quick as possible")
     while count <= 5:
-        # Generating unique numbers
-        num1, num2 = (random.randint(1, 100), random.randint(1, 100))
+        # generating unique numbers for different complexity
+        if choice == 1:
+            num1, num2 = (random.randint(1, 100), random.randint(1, 100))
+        elif choice == 2:
+            num1, num2 = (random.uniform(101, 500), random.uniform(101, 500))
+            num1, num2 = (round(num1, random.randint(1, 2)), round(num2, random.randint(1, 2)))
+        else:
+             num1, num2 = (random.uniform(501, 1000), random.uniform(501, 1000))
+             num1, num2 = (round(num1, random.randint(2, 4)), round(num2, random.randint(2, 4)))
         print(f"Q{count}’s out")
         # Generating a random operator every time
         operator_selector = random.choice(operators_list)
@@ -19,7 +26,7 @@ def game(points, operators_list, num1, num2):
             count += 1
             result = num1 + num2
             print(f'{num1} {operator_selector} {num2} = ', end=' ')
-            player_input = int(input())
+            player_input = float(input())
             if result == player_input:
                 points += 1
                 print('WoW : +1')
@@ -30,7 +37,7 @@ def game(points, operators_list, num1, num2):
             count += 1
             result = num1 - num2
             print(f'{num1} {operator_selector} {num2} = ', end=' ')
-            player_input = int(input())
+            player_input = float(input())
             if result == player_input:
                 points += 1
                 print('WoW : +1')
@@ -41,7 +48,7 @@ def game(points, operators_list, num1, num2):
             count += 1
             result = num1 * num2
             print(f'{num1} {operator_selector} {num2} = ', end=' ')
-            player_input = int(input())
+            player_input = float(input())
             if result == player_input:
                 points += 1
                 print('WoW : +1')
@@ -90,9 +97,14 @@ flag = True
 # Main loop to keep player in the
 while flag:
 
-    print('===============================')
-    print('Welcome to the PUZZLE world!')
-    print('===============================')
+    print('\n \t===============================')
+    print('\tWelcome to the PUZZLE world!')
+    print('\t===============================')
+    print('''
+          Game Instruction:
+          -> For complexity - medium - use only 1 digit after point
+          -> For complexity - hard - use only 2 digit after point
+          ''')
     print("""\tChoose complexity
             1. Easy
             2. Medium
@@ -104,20 +116,13 @@ while flag:
 
     print("-- Let's see how quick you are! --")
     if complexity_choice == 1:  # for Easy complexity
-        # Generating two numbers at each iteration
-        game(score, operator_list, complexity_choice)
+        game(score, complexity_choice, operator_list)
         game_again(flag)
     elif complexity_choice == 2:  # for medium complexity
-        # Generating two new numbers at each iteration
-        number1, number2 = (random.uniform(101, 500), random.uniform(101, 500))
-        number1, number2 = round(number1, random.randint(1, 3)), round(number2, random.randint(1, 3))
-        game(score, number1, number2, operator_list)
+        game(score, complexity_choice, operator_list)
         game_again(flag)
     elif complexity_choice == 3:  # for hard choice
-        # Generating two new numbers at each iteration
-        number1, number2 = (random.uniform(501, 1000), random.uniform(501, 1000))
-        number1, number2 = round(number1, random.randint(1, 5)), round(number2, randint(1, 5))
-        game(score, number1, number2, operator_list)
+        game(score, complexity_choice, operator_list)
         game_again(flag)
     else:
         print('Enter a valid choice')
